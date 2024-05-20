@@ -1,5 +1,4 @@
 import React from "react";
-import image1 from "../assets/react.svg";
 import { Link } from "react-router-dom";
 import { Search2Icon } from "@chakra-ui/icons";
 

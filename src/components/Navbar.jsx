@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import { ColorTheme } from "./ColorTheme";
 
 export const Navbar = ({ onSearch }) => {
   const [searchQuery, setSearchQuery] = useState("");
-  //   console.log(searchQuery);
 
   const handleSearch = (e) => {
     e.preventDefault();

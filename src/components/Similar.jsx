@@ -1,26 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Navbar } from "./Navbar";
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Image,
-  Heading,
-  Divider,
-  Button,
-  Stack,
-  SimpleGrid,
-} from "@chakra-ui/react";
-import Details from "./Details";
-
+import { Card, CardBody, CardFooter, Image, Heading } from "@chakra-ui/react";
 export const Similar = ({ types }) => {
-  console.log(types[0].type.name);
-
   const [similarPokemonType1, setSimilarPokemonType1] = useState(null);
   const typeUrl = `https://pokeapi.co/api/v2/type/${types[0].type.name}`;
-  const [pokemonType, setPokemonType] = useState({});
-  console.log(typeUrl);
 
   const getPokemonNumber = (url) => {
     const parts = url.split("/");
@@ -32,9 +14,7 @@ export const Similar = ({ types }) => {
     try {
       const response = await fetch(typeUrl);
       const data = await response.json();
-      console.log(data.pokemon[0]);
       setSimilarPokemonType1(data.pokemon);
-      console.log(similarPokemonType1);
     } catch (error) {
       console.log(error);
     }

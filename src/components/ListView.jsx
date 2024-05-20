@@ -1,17 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Navbar } from "./Navbar";
-import About from "./Details";
 import {
   Card,
-  CardHeader,
   CardBody,
   CardFooter,
   Image,
   Heading,
-  Divider,
   Button,
-  Stack,
-  SimpleGrid,
 } from "@chakra-ui/react";
 import Details from "./Details";
 import { ArrowLeftIcon, ArrowRightIcon } from "@chakra-ui/icons";
@@ -31,8 +26,6 @@ export const ListView = () => {
   const [pageCount, setPageCount] = useState(0);
   const [canNextPage, setCanNextPage] = useState(false);
   const [canPreviousPage, setCanPreviousPage] = useState(false);
-
-  // const [pokemonType, setPokemonType] = useState({})
 
   const getPokemonNumber = (url) => {
     const parts = url.split("/");
@@ -87,7 +80,6 @@ export const ListView = () => {
     }
   };
   console.log(searchQuery.length);
-  // const displayedList = searchQuery ? searchResults : listViews;
 
   return (
     <>
@@ -117,9 +109,7 @@ export const ListView = () => {
                   variant="solid"
                   colorScheme=""
                   className="text-center bg-theme-pink py-8 bg-opacity-70 "
-                >
-                  {/* <Details pokemon={item} /> */}
-                </Button>
+                ></Button>
               </CardFooter>
             </Card>
           ) : (

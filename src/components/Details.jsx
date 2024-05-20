@@ -3,14 +3,12 @@ import {
   Drawer,
   DrawerBody,
   DrawerFooter,
-  DrawerHeader,
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
   useDisclosure,
   Button,
   Card,
-  CardHeader,
   CardBody,
   CardFooter,
   Image,
@@ -22,7 +20,6 @@ import {
   TabList,
   Progress,
 } from "@chakra-ui/react";
-import { Stats } from "./Stats";
 import { Similar } from "./Similar";
 
 function Details({ pokemon }) {
